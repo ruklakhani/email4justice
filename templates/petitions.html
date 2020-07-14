@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for petition in petitions %}
+            <p>{{ petition.title }}</p>
+            <a href="{{ petition.url }}">go!</a><br><br>
+    {% endfor %}
+
+{% endblock %}
