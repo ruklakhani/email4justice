@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
+    {% for template in templates %}
+            <p>{{ template.title }}</p>
+            <a href="/{{ template._id }}">go!</a><br><br>
+    {% endfor %}
+
 <div class="card-group">
         <div class="card">
             <div class="card-body" style="background-color: #bfbfbf;">

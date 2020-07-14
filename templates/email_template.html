@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/{{template._id}}" method="post" id="form">
+    <div class="w-75 mt-4 mx-auto">
+        {% set vars = [] %}
+        {% for section in template.template %}
+            {% if section in template.inputs %}
+                <input class="form-control w-25 d-inline m-0" type="text" name="{{section}}" placeholder="{{section}}" {% if section not in vars %}{{ vars.append(section) }}{% else %}disabled{% endif %}>
+            {% else %}
+                <span class="show_whitespace">{{ section }}</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="mt-3 w-100 d-flex justify-content-center">
+        <input type="submit" class="btn btn-success mx-auto" value="haha done baybee">
+    </div>
+</form>
+
+
+
+{% endblock %}

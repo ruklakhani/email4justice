@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div style="white-space: pre-line">{{full}}</div>
-<a href="{{mailto}}">send email</a>
+<div class="show_whitespace">{{full}}</div>
+
+    {% for email in mailto %}
+        <a href="{{email}}">send email</a><br>
+    {% endfor %}
 
 {% endblock %}
