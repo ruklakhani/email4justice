@@ -1,0 +1,9 @@
+#footer {
+    height: 7vh;
+} 
+#content-wrap {
+    min-height: 93vh;
+}
+body {
+    min-height: 100vh;
+}
