@@ -67,7 +67,7 @@ def fill_template(template, inputs):
     for section in template:
         if section in inputs.keys():
             filled += inputs[section]
-        else: 
+        else:
             filled += section
     return filled
 
@@ -80,4 +80,5 @@ def get_inputs(template):
 
 
 if __name__ == '__main__':
-    app.run()
+    # app.run()
+    app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
