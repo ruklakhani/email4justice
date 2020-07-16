@@ -1,6 +1,6 @@
 #footer {
     height: 7vh;
-} 
+}
 #content-wrap {
     min-height: 93vh;
 }
@@ -10,4 +10,8 @@ body {
 
 .show_whitespace {
    white-space: pre-wrap;
+}
+
+.repo-link:hover  {
+    cursor: pointer;
 }

@@ -1,18 +1,21 @@
 <!-- base.html -->
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+    <script src="https://kit.fontawesome.com/1e324e14c9.js" crossorigin="anonymous"></script>
+
+    <title>Email 4 Justice</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='favicon.ico') }}"
 </head>
 
     <body>
         <div id='content-wrap'>
             <nav class="navbar navbar-expand-md bg-dark navbar-dark">
                 <!-- Brand -->
-                <a class="navbar-brand" href="/">Email 4 Justice</a>
+                    <a class="navbar-brand" href="/"><i aria-hidden="true" class="fas fa-balance-scale-right"></i> Email 4 Justice</a>
 
                 <!-- Toggler/collapsibe Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

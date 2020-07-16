@@ -55,8 +55,8 @@ def send(templ_id):
     full = fill_template(template["template"], request.form)
     mailto = []
     if template["emails"]:
-        for email in template["emails"]:
-            mailto.append(f'mailto:{email}?bcc=&subject={template["title"]}&body={full}')
+        # for email in template["emails"]:
+            mailto.append(f'mailto:{",".join(template["emails"])}?bcc=&subject={template["title"]}&body={full}')
     else:
         if request.form["email"]:
             mailto.append(f'mailto:{request.form["email"]}?bcc=&subject={template["title"]}&body={full}')
