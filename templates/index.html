@@ -2,31 +2,17 @@
 
 {% block content %}
 
-
-    {% for template in templates %}
-            <p>{{ template.title }}</p>
-            <a href="/{{ template._id }}">go!</a><br><br>
-    {% endfor %}
-
 <div class="card-group">
-        <div class="card">
-            <div class="card-body" style="background-color: #bfbfbf;">
-                <h4 class="card-title">Breonna Taylor</h4>
-                <a href="/breonnataylor"><button class="btn btn-primary" type="button">Go!</button></a>
+    {% for template in templates %}
+    <div class="card">
+        <div class="card-body bg-light">
+            <h4 class="card-title">{{ template.title }}</h4>
+            <a href="/{{ template._id }}"><button class="btn btn-primary" type="button">Go!</button></a>
             </div>
         </div>
-        <div class="card">
-            <div class="card-body" style="background-color: #bfbfbf;">
-                <h4 class="card-title">George Floyd</h4>
-                <a href="/georgefloyd"><button class="btn btn-primary" type="button">Go!</button></a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body" style="background-color: #bfbfbf;">
-                <h4 class="card-title">Contact Your Rep about Police</h4>
-                <a href="/police"><button class="btn btn-primary" type="button">Go!</button></a>
-            </div>
-        </div>
+    </div>
+    {% endfor %}
 </div>
+
 
 {% endblock %}
