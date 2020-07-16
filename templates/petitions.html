@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<div class="">
     {% for petition in petitions %}
-            <p>{{ petition.title }}</p>
-            <a href="{{ petition.url }}">go!</a><br><br>
+    <div class="card">
+        <div class="card-body bg-light">
+            <h4 class="card-title">{{ petition.title }}</h4>
+            <a href="{{ petition.url }}"><button class="btn btn-primary" type="button">Go!</button></a>
+        </div>
+    </div>
     {% endfor %}
-
+</div>
 {% endblock %}
