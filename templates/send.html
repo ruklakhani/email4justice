@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="show_whitespace">{{full}}</div>
+<div class="mt-4 mx-auto w-75">
+    <div class="h4 text-center">Time to send some emails out!</div>
+    <div class="d-flex justify-content-center">
+        {% for email in mailto %}
+            <a class="btn btn-success mx-2" href="{{ email }}">send email</a><br>
+        {% endfor %}
+    </div>
 
-    {% for email in mailto %}
-        <a href="{{email}}">send email</a><br>
-    {% endfor %}
-
+    <div class="h4 mt-4">Here's the full email:</div>
+    <div class="show_whitespace">{{ full }}</div>
+</div>
 {% endblock %}

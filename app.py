@@ -58,7 +58,10 @@ def send(templ_id):
         for email in template["emails"]:
             mailto.append(f'mailto:{email}?bcc=&subject={template["title"]}&body={full}')
     else:
-        mailto.append(f'mailto:PLEASE_FIND_YOUR_MAYORS_EMAIL?bcc=&subject=test&body={full}')
+        if request.form["email"]:
+            mailto.append(f'mailto:{request.form["email"]}?bcc=&subject={template["title"]}&body={full}')
+        else:
+            mailto.append(f'mailto:PLEASE_FIND_YOUR_MAYORS_EMAIL?bcc=&subject=test&body={full}')
     return render_template('send.html', full=full, mailto=mailto)
 
 
@@ -80,5 +83,4 @@ def get_inputs(template):
 
 
 if __name__ == '__main__':
-    # app.run()
     app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))

@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="">
+<div class="mx-auto w-75 mt-4">
     {% for petition in petitions %}
-    <div class="card">
+    <div class="card mb-3">
         <div class="card-body bg-light">
-            <h4 class="card-title">{{ petition.title }}</h4>
-            <a href="{{ petition.url }}"><button class="btn btn-primary" type="button">Go!</button></a>
+            <div class="d-flex justify-content-between">
+                <h4 class="my-auto">{{ petition.title }}</h4>
+                <a class="btn btn-success" href="{{ petition.url }}">Go!</a>
+            </div>
+
         </div>
     </div>
     {% endfor %}
